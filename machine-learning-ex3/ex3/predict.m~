@@ -23,11 +23,10 @@ p = zeros(size(X, 1), 1);
 
 X = [ones(m, 1) X];
 gz1 = sigmoid(X * Theta1.');
-gz1 = [ones(m, 1) gz1];
+gz1 = [ones(
 
-gz2 = sigmoid(gz1 * Theta2.');
 
-[y, p] = max(gz2, [], 2);
+
 
 
 

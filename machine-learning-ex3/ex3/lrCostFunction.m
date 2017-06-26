@@ -41,13 +41,13 @@ n = length(grad);
 %% Computing Cost
 
 % First half of pre-regularized.
-J = -1 * (y .* log(sigmoid(X * theta)))
+J = -1 * (y .* log(sigmoid(X * theta)));
 
 % Second half of pre-reg'd
-J = J - (1 - y) .* log(1 - sigmoid (X * theta))
+J = J - (1 - y) .* log(1 - sigmoid (X * theta));
 
 % Summing J
-J = 1 / m * sum(J)
+J = 1 / m * sum(J);
 
 % Regularizing J
 J = J + lambda / (2 * m) * sum(theta(2:n).^2);
